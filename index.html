@@ -4,48 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
+<style>
+    .dunkin{margin: 0;padding: 0;}
+    .dunkin{
+        margin: 0;padding: 0;
+        width: 1920px;
+        height: 900px;
+        background-image: url(./dunckin/bg_body.jpg);
+        }
+    .logo img{margin-top: 250px; margin-left: 40px;}
+    .img1 img,.img2 img,.img3 img,.img4 img,.img5 img,.img6 img{position: absolute;}
+    .img1{position: absolute; margin-top: -220px;margin-left: 500px;}
+    .img1 img{margin-left:-100px;margin-top: 30px;}
+
+    .img2{position: absolute; margin-top: 300px;margin-left: 300px; }
+    .txt2{text-align: right;}
+    .img2 img{margin-left: 300px;margin-top: -40px;}
+
+    .img3{position: absolute; margin-left: 880px;margin-top: -50px;}
+    .img3 img{margin-left: -70px;}
+    .txt3{text-align: center;}
+
+    .img4{position: absolute; margin-left: 1200px;margin-top: 200px;}
+    .txt4{text-align: center;}
+
+    .img5{position: absolute; margin-left: 1400px; margin-top: -100px;}
+    .img5 img{margin-top: 30px;}
+
+
+</style>
 <body>
-    <h1></h1>
+    <section class="dunkin">
+        <div class="logo">
+            <img src="./dunckin/던킨던킨(DUNKIN)로고1.png" width="300px"  alt="">
+        </div>
+        <div class="img1">
+            <img src="./dunckin/1770187410.png" height="500px" alt="">
+            <div class="txt1">
+                <h1>기쁨, 을 주는 바나나 우유 도넛</h1>
+                <p>달콤하고 부드러운 바나나맛 우유 도넛</p>
+            </div>
+            <img src="" alt="">
+        </div>
+        <div class="img2">
+            <img src="./dunckin/1764919245.png" height="300px" alt="">
+            <div class="txt2">
+                <h1>보스톤 크림</h1>
+                <p>부드러운 바바리안 크림을 채운 후 <br>
+                    달콤한 초콜릿과 화려한 컬러 스프링클을 <br>토핑한 도넛</p>
+            </div>
+        </div>
+        <div class="img3">
+            <img src="./dunckin/big_726.png" alt="">
+            <div class="txt3">
+                <h1>카푸치노 츄이스티</h1>
+                <p>쫄깃한 도넛에 카푸치노의 풍미가 듬뿍!</p>
+            </div>
+            <img src="" alt="">
+        </div>
+        <div class="img4">
+            <img src="./dunckin/big_536.png" alt="">
+            <div class="txt4">
+                <h1>페이머스 글레이즈드</h1>
+                <p>더욱 촉촉하고 부드러워진 달콤한 정통 도넛</p>
+            </div>
+            <img src="" alt="">
+        </div>
+        <div class="img5">
+            <img src="./dunckin/1770188582.png" alt="" width="330px">
+            <div class="txt5">
+                <h1>버럭, 할 땐 딸기 우유 츄이스티</h1>
+                <p>새콤달콤한 딸기 글레이즈가 입혀진 쫄깃한 츄이스티</p>
+            </div>
+            <img src="" alt="">
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
     <script>
-        function 함수() {
-            console.log('함수 내부의 코드입니다. 1')
-            console.log('함수 내부의 코드입니다. 2')
-            console.log('함수 내부의 코드입니다. 3');
-        }
-        함수();
-        console.log(typeof 함수);
-        console.log(함수);
-        document.querySelector('h1').innerHTML = "텍스트";
+        const fadeEls = document.querySelectorAll('.dunkin .logo');
+        gsap.from(fadeEls, {
+            duration: 5,
+            scale: .3,
+            ease:'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
+        const img1Els = document.querySelectorAll('.dunkin .img1');
+        gsap.from(img1Els, {
+            duration: 5,
+            scale: .3,
+            ease:'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
+        const img2Els = document.querySelectorAll('.dunkin .img2');
+        gsap.from(img2Els, {
+            delay:1,
+            duration: 5,
+            scale: .3,
+            ease:'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
+        const img3Els = document.querySelectorAll('.dunkin .img3');
+        gsap.from(img3Els, {
+            delay:2,
+            duration: 5,
+            scale: .3,
+            ease:'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
+        const img4Els = document.querySelectorAll('.dunkin .img4');
+        gsap.from(img4Els, {
+            delay:3,
+            duration: 5,
+            scale: .3,
+            ease:'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
+        const img5Els = document.querySelectorAll('.dunkin .img5');
+        gsap.from(img5Els, {
+            delay:4,
+            duration: 5,
+            scale: .3,
+            ease:'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
+        const img6Els = document.querySelectorAll('.dunkin .img6');
+        gsap.from(img6Els, {
+            delay:6,
+            duration: 5,
+            scale: .3,
+            ease:'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
 
-        function f(x) {
-            return x*x;
-        }
-        console.log(f(3));
-        const h1Text = document.querySelector('h1');
-        function sumAll(a,b) {
-            let output = 0;
-            for (let i = a; i<=b; i++) {
-                output += i;
-            }
-            return output;
-        }
-        console.log(sumAll(10, 20));
-        document.querySelector('h1').innerHTML = `1부터 100까지의 합은 ${sumAll(1,100)}`;
-
-        function min(array) {
-            let output = array[0];
-            for (const item of array) {
-                if (output > item) {
-                    output = item;
-                }
-            }
-            return output;
-        }
-
-        const testArray = [52,273,32,103,275,24,57];
-        console.log(`${testArray}중에서`);
-        console.log(`최소값 = ${min(testArray)}`)
     </script>
 </body>
 </html>

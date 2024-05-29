@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+p{font-size: 20px;}
+.img1,.img2,.img3,.img4,.img5,.img6{font-family: 'CookieRun-Regular'; }
+.img1,.img2,.img3,.img4,.img5,.img6 h1{font-weight: 200;}
+.img1 p{font-weight: 300; }
